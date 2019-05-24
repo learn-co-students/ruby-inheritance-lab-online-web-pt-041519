@@ -8,13 +8,26 @@ steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
 
+mischa = Student.new
+mischa.first_name = "Mischa"
+mischa.last_name = "Ivanova"
+
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Testerman"
+#jim.learn(some_knowledge) #=> Jim can't learn because User has no #learn method
 
 some_knowledge = avi.teach 
-
 steve.learn(some_knowledge)
 
+more_knowledge = avi.teach 
+mischa.learn(more_knowledge)
+
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Mischa just learned this important knowledge: '#{mischa.knowledge.first}' from Avi"
+
+
